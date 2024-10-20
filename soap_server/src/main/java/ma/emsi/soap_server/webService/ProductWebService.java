@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 @WebService(serviceName = "ProductWS")
-public class ProductWebService implements ProductServiceInterface{
+public class ProductWebService implements ProductServiceInterface {
 
     @Autowired
     ProductRepository productRepository;
@@ -19,11 +19,6 @@ public class ProductWebService implements ProductServiceInterface{
     public Double sellingPrice(@WebParam(name = "price") Double price){
         return price*1.5;
     }
-
-    /*@WebMethod
-    public Product getProduct(Integer code){
-        return new Product(code,"Table",300.00,new Date());
-    } */
 
     @Override
     public Product getProduct(Integer code) {
